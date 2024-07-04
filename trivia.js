@@ -44,13 +44,13 @@
 //     console.log(numeroUsuario+ " x " + i + " = " + resultado);
 // }
 
-// alert("Bienvenido a la Trivia Sobre Cultura General!")
+alert("Bienvenido a la Trivia Sobre Cultura General!")
 
-// alert("El Objetivo del juego es responder preguntas eligiendo la opcion correcta")
+alert("El Objetivo del juego es responder preguntas eligiendo la opcion correcta")
 
-// alert("Cada respuesta correcta sumará 3 puntos a la puntución total y cada respuesta incorrecta restará 1 punto")
+alert("Cada respuesta correcta sumará 3 puntos a la puntución total y cada respuesta incorrecta restará 1 punto")
 
-// alert("Comenzemos!")
+alert("Comenzemos!")
 
 let nombreUsuario = prompt("ingresa tu nombre")
 
@@ -58,16 +58,26 @@ let correcta = 3
 let incorrecta = -1
 let puntuacion = 0  
 
+console.log(puntuacion);
+
 let respuesta1= prompt("En que año Finalizo la Segunda Guerral Mundial? A. 1950 B. 1960 C. 1945 D. 1934")
 
 console.log(respuesta1);
 
-if(respuesta1==="c"){
-    let puntuacion = puntuacion + 3
+function sumar () {
+    puntuacion= puntuacion+3
+}
+
+if(respuesta1=="c"){
+    sumar
+    
     console.log(puntuacion);
 }else{
-    let puntuacion = puntuacion - 1
-    console.log(puntuacion);
+  alert("incorrecto")
+
 }
+
+
+
 
 
