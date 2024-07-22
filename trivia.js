@@ -1,3 +1,27 @@
+
+let preguntas = [
+  { id:1,
+    pregunta: "En que año Finalizo la Segunda Guerral Mundial? A. 1950 B. 1960 C. 1945 D. 1934",
+    respuesta: "C",
+  },
+  { id:2,
+    pregunta: "Cuantos copas del mundo tiene la selección de Argentina? A. 5 B. 1 C. 8 D. 3",
+    respuesta: "D",
+  },
+  { id:3,
+    pregunta: "Quien escribio la Odisea? A. Homero B. Shakespeare C. Picasso D. Aristoteles",
+    respuesta: "A",     
+  },
+  { id:4,
+    pregunta: "En que continente se encuentra Ecuador? A. Europa B. America C. Asia D. Oceanía",
+    respuesta: "B",
+  },
+  { id:5,
+    pregunta: "Cual es la moneda del Reino Unido? A. Libra B. Peso C. Dolar D. Euro",
+    respuesta: "A",
+  }
+]
+
 alert("Bienvenido a la Trivia Sobre Cultura General!")
 
 alert("El Objetivo del juego es responder preguntas eligiendo la opcion correcta")
@@ -8,115 +32,62 @@ alert("Comenzemos!")
 
 let nombreUsuario = prompt("Ingresa tu nombre")
 
-console.log(nombreUsuario);
+let iniciacion="si"
 
-let puntuacion
+while(iniciacion==="si"){
 
-let correctas
+let puntuacion = 0
 
-let gameInit="si"
+let correctas=0
 
-function sumar(){
+let respCorrectas=[]
 
-  puntuacion = puntuacion + 3
+preguntas.forEach(elemento=> {
+  let respUsuario=prompt(elemento.pregunta)
+  if (respUsuario==elemento.respuesta){
+    puntuacion += 3
+    correctas +=1
+    respCorrectas.push(elemento)
+  }else{
+    puntuacion -= 1
+  }
+})
 
-  correctas = correctas + 1
+let colectorCorrectas = ()=> {
+  for (let i = 0; i < respCorrectas.length; i++){
+      alert(JSON.stringify(respCorrectas[i].pregunta + " | Respuesta correcta: " + respCorrectas[i].respuesta ))
+    }
+  }
+
+let idenPreguntas = (identificador) => {
+  for(let i = 0; i < preguntas.length; i++) {
+      if (preguntas[i].id==identificador){
+        alert(JSON.stringify(preguntas[i].pregunta))
+      }
+    }
+  }
+console.log("Correctas = " + correctas);
+
+console.log("Puntos = " + puntuacion);
+
+alert("Felicidades " + nombreUsuario + "! Has completado el juego")
+
+alert("Respondiste correctamente " + correctas + " preguntas y tu puntuacion total es de " + puntuacion + " puntos!")
+
+let pedidoResp = prompt("Quieres ver tus respuestas correctas?")
+
+if(pedidoResp==="si"){
+colectorCorrectas()
 }
+let pedidoCorrec = prompt("Quieres ver alguna de las preguntas nuevamente?")
 
-function restar(){
-
-  puntuacion = puntuacion - 1
+if(pedidoCorrec==="si"){
+  let pregRequerida=prompt("Cual es la pregunta que quieres ver?")
+  if(pregRequerida<6 && pregRequerida>0){
+    idenPreguntas (pregRequerida)
+    }else {
+      alert("Esa pregunta no existe")
+    }
+  }
+iniciacion=prompt("Quieres volver a jugar?")
 }
-
-while (gameInit=="si"||gameInit=="SI"){
-
-  puntuacion=0
-
-  correctas=0
-
-  let respuesta1= prompt("En que año Finalizo la Segunda Guerral Mundial? A. 1950 B. 1960 C. 1945 D. 1934")
-
-    if(respuesta1=="C"||respuesta1=="c"){
-
-      sumar()
-
-    }else {
-
-      restar()
-
-    }
-    console.log(puntuacion);
-
-  let respuesta2=prompt("Cuantos copas del mundo tiene la selección de Argentina? A. 5 B. 1 C. 8 D. 3")
-
-    if(respuesta2=="D"||respuesta2=="d"){
-      
-      sumar()
-
-    }else {
-
-      restar()
-
-    }
-
-    console.log(puntuacion);
-
-  let respuesta3=prompt("Quien escribio la Odisea? A. Homero B. Shakespeare C. Picasso D. Aristoteles")
-
-    if(respuesta3=="A"||respuesta3=="a"){
-
-      sumar()
-
-    }else {
-
-      restar()
-      
-    }
-    console.log(puntuacion);
-
-  let respuesta4=prompt("En que continente se encuentra Ecuador? A. Europa B. America C. Asia D. Oceanía")
-
-    if(respuesta4=="B"||respuesta4=="b"){
-
-      sumar()
-
-    }else {
-
-      restar()
-
-    }
-    console.log(puntuacion);
-
-  let respuesta5=prompt("Cual es la moneda del Reino Unido? A. Libra B. Peso C. Dolar D. Euro")
-
-    if(respuesta5=="A"||respuesta5=="a"){
-
-      sumar()
-      
-    }else {
-
-      restar()
-      
-    }
-    console.log(puntuacion);
-
-  console.log("Correctas = " + correctas);
-
-  console.log("Puntos = " + puntuacion);
-
-  alert("Felicidades " + nombreUsuario + "! Has completado el juego")
-
-  alert("Respondiste correctamente " + correctas + " preguntas y tu puntuacion total es de " + puntuacion + " puntos!")
-
-
-  gameInit=prompt("¿Quieres volver a jugar?")
-
-}
-
-alert("Gracias por jugar!")
-
-// Para todo el juego use el ciclo while gracias a la recomendacion de la correccion y use las funciones para eficientizar el proceso y el codigo.
-
-
-
-
