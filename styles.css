@@ -1,72 +1,95 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color:rgb(239, 255, 251);
+body {
+  background-color: rgb(239, 255, 251);
 }
-.bordes{
-    border: solid;
-    border-color: darkcyan;
-    border-radius: 10px;
+.bordes {
+  border: solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+}
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+.cajasJuego {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cajaPreguntas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 30vw 5vh 30vw;
+}
+.preguntas {
+  font-size: 1.5rem;
+}
+.cajaRespuestas {
+  margin-top: 5vh;
+}
+.bordeRespuesta {
+  margin-top: 3vh;
+  padding: 1vh 25vw 1vh 25vw;
+}
+.contador {
+  margin-top: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cajaContador {
+  border-radius: 50%;
+  padding: 5%;
+}
+.puntos {
+  font-size: 1.6rem;
+}
 
-}
-.titulo{
-    display: flex;
+.contenedorDeInicio {
+  /* display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 10vh;
-    margin-bottom: 5vh;
+    align-items: center; */
+  text-align: center;
+  border: solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  padding: 5vh 5vw 5vh 5vw;
+  margin: 0 15vw 0 15vw;
+  line-height: 30px;
 }
-.cajasJuego{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.cajaPreguntas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5vh 30vw 5vh 30vw;
-}
-.preguntas{
-    font-size: 1.5rem;
-}
-.cajaRespuestas{
-    margin-top: 5vh;
-}
-.bordeRespuesta{
-    margin-top: 3vh;
-    padding: 1vh 25vw 1vh 25vw;
-}
-.contador{
-    margin-top: 8vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.cajaContador{
-    border-radius: 50%;
-    padding: 5%;
-}
-.puntos{
-    font-size: 1.6rem;
+.contenedorDeInicio p {
+  padding-bottom: 8vh;
+  font-size: 1.3rem;
 }
 
-.contenedorDeInicio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    border: solid;
-    border-color: darkcyan;
-    border-radius: 10px;
-    padding: 5vh 5vw 5vh 5vw;
-    margin: 0 15vw 0 15vw;
-    line-height: 30px;
+.cajaBotonRespuesta {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  width: 50vw;
 }
-.contenedorDeInicio p{
-    padding-bottom: 8vh;
-    font-size: 1.3rem;
+
+.botonRespuesta {
+  height: 5vh;
+}
+
+.cajaFinal {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  padding: 5vh 5vw 5vh 5vw;
+  margin: 0 15vw 0 15vw;
+  line-height: 30px;
+  font-size: 1.2rem;
 }
