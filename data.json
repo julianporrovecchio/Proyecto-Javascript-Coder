@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "pregunta": "¿En que año Finalizo la Segunda Guerral Mundial?",
+    "respuestaA": "1950",
+    "respuestaB": "1960",
+    "respuestaC": "1945",
+    "respuestaD": "1934",
+    "respuestaCorrecta": "1945"
+  },
+  {
+    "id": 2,
+    "pregunta": "¿Cuantos copas del mundo tiene la selección de Argentina?",
+    "respuestaA": "5",
+    "respuestaB": "1",
+    "respuestaC": "8",
+    "respuestaD": "3",
+    "respuestaCorrecta": "3"
+  },
+  {
+    "id": 3,
+    "pregunta": "¿Quien escribio la Odisea?",
+    "respuestaA": "Homero",
+    "respuestaB": "Shakespeare",
+    "respuestaC": "Picasso",
+    "respuestaD": "Aristoteles",
+    "respuestaCorrecta": "Homero"
+  },
+  {
+    "id": 4,
+    "pregunta": "¿En que continente se encuentra Ecuador?",
+    "respuestaA": "Europa",
+    "respuestaB": "America",
+    "respuestaC": "Asia",
+    "respuestaD": "Oceanía",
+    "respuestaCorrecta": "America"
+  },
+  {
+    "id": 5,
+    "pregunta": "¿Cual es la moneda del Reino Unido?",
+    "respuestaA": "Libra",
+    "respuestaB": "Peso",
+    "respuestaC": "Dolar",
+    "respuestaD": "Euro",
+    "respuestaCorrecta": "Libra"
+  }
+]

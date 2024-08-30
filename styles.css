@@ -6,17 +6,33 @@
 body {
   background-color: rgb(239, 255, 251);
 }
-.bordes {
-  border: solid;
-  border-color: darkcyan;
-  border-radius: 10px;
-}
 .titulo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10vh;
   margin-bottom: 5vh;
+}
+.bordes {
+  border: solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+}
+.contenedorDeInicio {
+  /* display: flex;
+      flex-direction: column;
+      align-items: center; */
+  text-align: center;
+  border: solid;
+  border-color: darkcyan;
+  border-radius: 10px;
+  padding: 5vh 5vw 5vh 5vw;
+  margin: 0 15vw 0 15vw;
+  line-height: 30px;
+}
+.contenedorDeInicio p {
+  padding-bottom: 8vh;
+  font-size: 1.3rem;
 }
 .cajasJuego {
   display: flex;
@@ -52,24 +68,6 @@ body {
 .puntos {
   font-size: 1.6rem;
 }
-
-.contenedorDeInicio {
-  /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-  text-align: center;
-  border: solid;
-  border-color: darkcyan;
-  border-radius: 10px;
-  padding: 5vh 5vw 5vh 5vw;
-  margin: 0 15vw 0 15vw;
-  line-height: 30px;
-}
-.contenedorDeInicio p {
-  padding-bottom: 8vh;
-  font-size: 1.3rem;
-}
-
 .cajaBotonRespuesta {
   display: flex;
   flex-direction: column;
@@ -80,7 +78,6 @@ body {
 .botonRespuesta {
   height: 5vh;
 }
-
 .cajaFinal {
   display: flex;
   flex-direction: column;
